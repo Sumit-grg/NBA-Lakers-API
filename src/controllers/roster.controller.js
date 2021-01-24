@@ -1,4 +1,4 @@
-import Player from "../models/model.js";
+import Player from "../models/roster.model.js";
 
 const getAll = async (req, res) => {
   const player = await Player.getAll();
@@ -7,8 +7,11 @@ const getAll = async (req, res) => {
 
 const get = async (req, res) => {
   const player = await Player.get(req.params.id);
-  res.status(200).send({ player })
+  (!player) ? res.status(404).send({ 
+    message: `Id of '${req.params.id}' does not exist. Please select an Id between 1 - 18` }):
+  res.status(200).send({ player });
 };
+
 
 const post = (req, res) => { 
   const player = new Player(req.body); 

@@ -1,6 +1,7 @@
 import express from "express";
 import logger from "morgan";
-import routes from "./routes/route.js";
+import rosterRoutes from "./routes/roster.route.js";
+import seasonRoutes from "./routes/season.route.js";
 const app = express();
 const port = process.env.PORT || 3000; //middlewares
 
@@ -9,7 +10,8 @@ app.use(express.json());
 app.use(express.urlencoded({
   extend: false
 }));
-app.use("/lakers/api", routes);
+app.use("/lakers/roster", rosterRoutes);
+app.use("/lakers/season", seasonRoutes);
 app.get("/lakers", (req, res) => res.send({
   message: "Welcome to Lakers API"
 }));

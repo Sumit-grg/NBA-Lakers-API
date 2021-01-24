@@ -24,6 +24,7 @@ export default class Player {
     return response.data();
   }
 
+
   async save(){
     // this.dateModified = new Date().toUTCString();
     const player = {...this};

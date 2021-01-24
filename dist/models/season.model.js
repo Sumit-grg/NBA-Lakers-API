@@ -1,14 +1,10 @@
 import { firestore } from "../config/firebase.js";
 export default class Season {
   constructor(data) {
-    this.id = data.id;
-    this.name = data.name;
-    this.number = data.number;
-    this.position = data.position;
-    this.dob = data.dob;
-    this.height = data.height;
-    this.info = data.info;
-    this.img = data.img; // this.dateCreated = new Date().toUTCString();
+    this.year = data.year;
+    this.win = data.win;
+    this.loss = data.loss;
+    this.playoffs = data.playoffs;
   }
 
   static async getAll() {
@@ -25,7 +21,7 @@ export default class Season {
     // this.dateModified = new Date().toUTCString();
     const season = { ...this
     };
-    const response = await firestore.collection("season").doc(season.id).set(season);
+    const response = await firestore.collection("season").doc(season.year).set(season);
   }
 
   static async destroy(id) {

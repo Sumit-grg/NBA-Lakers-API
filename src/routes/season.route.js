@@ -3,16 +3,9 @@ import {getAll, get, post, destroy} from "../controllers/season.controller.js";
 
 const seasonRoutes = Router();
 
-//GET ALL
 seasonRoutes.get("/", getAll);
-
-//GET :ID
 seasonRoutes.get("/:id", get);
-
-//POST
-seasonRoutes.post("/", post)
-
-//DELETE
+seasonRoutes.post("/", post);
 seasonRoutes.delete("/:id", destroy)
 
 

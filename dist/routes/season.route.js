@@ -1,12 +1,12 @@
 import { Router } from "express";
-import { getAll, get, post, destroy } from "../controllers/controller.js";
+import { getAll, get, post, destroy } from "../controllers/season.controller.js";
 const seasonRoutes = Router(); //GET ALL
 
-routes.get("/", getAll); //GET :ID
+seasonRoutes.get("/", getAll); //GET :ID
 
-routes.get("/:id", get); //POST
+seasonRoutes.get("/:id", get); //POST
 
-routes.post("/", post); //DELETE
+seasonRoutes.post("/", post); //DELETE
 
-routes.delete("/:id", destroy);
+seasonRoutes.delete("/:id", destroy);
 export default seasonRoutes;

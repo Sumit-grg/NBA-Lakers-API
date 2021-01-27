@@ -65,21 +65,29 @@
  *            - player
  *          properties:
  *              id:
- *                type: integer
+ *                type: string
+ *                example: "21"
  *              name:
  *                type: string
+ *                example: "Kobe Bryant"
  *              number:
  *                type: integer
+ *                example: 24
  *              position:
  *                type: string
+ *                example: "Shooting-Guard"
  *              dob:
  *                type: string
+ *                example: 23/08/1978
  *              height:
  *                type: string
+ *                example: "6'6"
  *              info:
  *                type: string
+ *                example: "RIP Black Mamba 1978-2020"
  *              img:
  *                type: string
+ *                example: "image url goes here"
  *    responses:
  *     201:
  *      description: New entry successfully added
@@ -160,6 +168,28 @@
  *      - Season
  *    summary: Creates new stat
  *    description: Add a new stats
+ *    consumes:
+ *      - applicatio/json
+ *    parameters:
+ *      - in: body
+ *        name: season
+ *        schema:
+ *          type: object
+ *          required:
+ *            - season
+ *          properties:
+ *              year:
+ *                type: string
+ *                example: "2021"
+ *              win:
+ *                type: integer
+ *                example: 55
+ *              loss:
+ *                type: integer
+ *                example: 17
+ *              playoffs:
+ *                type: string
+ *                example: "Won NBA Final 4-2 against Nets"
  *    responses:
  *     201:
  *      description: New stats successfully added
@@ -178,7 +208,7 @@
  *    description: Deletes a stat from the given year
  *    parameters:
  *      - in: path
- *        name: id
+ *        name: year
  *        required: true
  *        description: year of a season to delete
  *        schema:

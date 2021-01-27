@@ -13,10 +13,11 @@ const options = {
     info: {
       title: "L.A. Lakers API",
       description: "A minimal RESTful API (CRUD) created using Node.js, Express, Nodemon, Babel and Firebase",
+      description: "A minimal RESTful API (CRUD) created using Node.js, Express, Nodemon, Babel and Firebase",
       version: "1.0.0"
     }
   },
-  apis: ["./src/swagger/index.js", "./src/routes/roster.route.js"]
+  apis: ["./src/swagger/index.js"]
 };
 const swaggerDocs = swaggerJsDoc(options);
 app.use("/lakers/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs)); //middlewares

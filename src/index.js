@@ -10,6 +10,7 @@ import swaggerJsDoc from "swagger-jsdoc";
 const app = express();
 const port = process.env.PORT || 3000; 
 
+//swagger docs
 const options = {
   definition: {
     // openapi: "3.0.0",
@@ -21,9 +22,8 @@ const options = {
   },
   apis: ["./src/swagger/index.js"]
 };
-
 const swaggerDocs = swaggerJsDoc(options);
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use("/lakers/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 //middlewares
 app.use(logger("dev"));

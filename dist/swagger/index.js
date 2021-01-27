@@ -1,6 +1,6 @@
 //ROSTER
-
 //GETALL
+
 /**
  * @swagger
  * paths:
@@ -17,6 +17,7 @@
  *         description: Unexpected error
  */
 //GET
+
 /**
  * @swagger
  * /lakers/roster/{id}:
@@ -44,6 +45,7 @@
  *        
  */
 //POST
+
 /**
  * @swagger
  * /lakers/roster:
@@ -63,29 +65,21 @@
  *            - player
  *          properties:
  *              id:
- *                type: string
- *                example: "21"
+ *                type: integer
  *              name:
  *                type: string
- *                example: "Kobe Bryant"
  *              number:
  *                type: integer
- *                example: 24
  *              position:
  *                type: string
- *                example: "Shooting-Guard"
  *              dob:
  *                type: string
- *                example: 23/08/1978
  *              height:
  *                type: string
- *                example: "6'6"
  *              info:
  *                type: string
- *                example: "RIP Black Mamba 1978-2020"
  *              img:
  *                type: string
- *                example: "image url goes here"
  *    responses:
  *     201:
  *      description: New entry successfully added
@@ -93,6 +87,7 @@
  *      description: Unexpected error
  */
 //DELETE
+
 /**
  * @swagger
  * /lakers/roster/{id}:
@@ -114,9 +109,9 @@
  *     default:
  *      description: Unexpected error 
  */
-
- //SEASON
+//SEASON
 //GetALL
+
 /**
  * @swagger
  * /lakers/season/:
@@ -132,6 +127,7 @@
  *      description: Unexpected error
  */
 //Get
+
 /**
  * @swagger
  * /lakers/season/{year}:
@@ -155,6 +151,7 @@
  *      description: Unexpected error
  */
 //POST
+
 /**
  * @swagger
  * /lakers/season/:
@@ -163,28 +160,6 @@
  *      - Season
  *    summary: Creates new stat
  *    description: Add a new stats
- *    consumes:
- *      - applicatio/json
- *    parameters:
- *      - in: body
- *        name: season
- *        schema:
- *          type: object
- *          required:
- *            - season
- *          properties:
- *              year:
- *                type: string
- *                example: "2021"
- *              win:
- *                type: integer
- *                example: 55
- *              loss:
- *                type: integer
- *                example: 17
- *              playoffs:
- *                type: string
- *                example: "Won NBA Final 4-2 against Nets"
  *    responses:
  *     201:
  *      description: New stats successfully added
@@ -192,6 +167,7 @@
  *      description: Unexpected error
  */
 //DELETE
+
 /**
  * @swagger
  * /lakers/season/{year}:
@@ -202,7 +178,7 @@
  *    description: Deletes a stat from the given year
  *    parameters:
  *      - in: path
- *        name: year
+ *        name: id
  *        required: true
  *        description: year of a season to delete
  *        schema:

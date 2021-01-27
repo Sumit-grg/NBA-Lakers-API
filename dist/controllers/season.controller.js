@@ -10,7 +10,7 @@ const getAll = async (req, res) => {
 const get = async (req, res) => {
   const season = await Season.get(req.params.id);
   !season ? res.status(404).send({
-    message: `Id of '${req.params.id}' does not exist. Please select an Id between 1 - 18`
+    message: `'${req.params.id}' does not exist. Please select a year between 1990-2020`
   }) : res.status(200).send({
     season
   });

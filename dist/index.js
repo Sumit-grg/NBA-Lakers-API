@@ -5,20 +5,21 @@ import seasonRoutes from "./routes/season.route.js";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000; //swagger docs
+
 const options = {
   definition: {
-    openapi: "3.0.0",
+    // openapi: "3.0.0",
     info: {
       title: "L.A. Lakers API",
-      description: "Lakers API information",
+      description: "A minimal RESTful API (CRUD) created using Node.js, Express, Nodemon, Babel and Firebase",
       version: "1.0.0"
     }
   },
-  apis: ["./routes/roster.route.js"]
+  apis: ["./src/swagger/index.js", "./src/routes/roster.route.js"]
 };
 const swaggerDocs = swaggerJsDoc(options);
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs)); //middlewares
+app.use("/lakers/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs)); //middlewares
 
 app.use(logger("dev"));
 app.use(express.json());

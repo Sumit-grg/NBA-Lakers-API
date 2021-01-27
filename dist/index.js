@@ -12,9 +12,11 @@ const options = {
     // openapi: "3.0.0",
     info: {
       title: "L.A. Lakers API",
-      description: "A minimal RESTful API (CRUD) created using Node.js, Express, Nodemon, Babel and Firebase",
-      description: "A minimal RESTful API (CRUD) created using Node.js, Express, Nodemon, Babel and Firebase",
+      description: "A minimal RESTful API (CRUD) created using Node.js, Express, Nodemon, Babel and Firebase. URL: https://nba-lakers-api.herokuapp.com/lakers/",
       version: "1.0.0"
+    },
+    server: {
+      url: "https://nba-lakers-api.herokuapp.com/lakers/"
     }
   },
   apis: ["./src/swagger/index.js"]

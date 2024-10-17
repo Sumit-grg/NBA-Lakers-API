@@ -16,7 +16,7 @@ const options = {
     // openapi: "3.0.0",
     info: {
       title: "L.A. Lakers API",
-      description: "A minimal RESTful API (CRUD) created using Node.js, Express, Nodemon, Babel and Firebase. URL: https://nba-lakers-api.herokuapp.com/lakers/",
+      description: "A minimal RESTful API (CRUD) created using Node.js, Express, Nodemon, Babel and Firebase. URL: https://nba-lakers-api.onrender.com/lakers",
       version: "1.0.0"
     },
   },

@@ -55,7 +55,7 @@
  *    summary: Creates new player/coach
  *    description: Add a new player/coach to the roster
  *    consumes:
- *      - applicatio/json
+ *      - application/json
  *    parameters:
  *      - in: body
  *        name: roster
@@ -66,7 +66,7 @@
  *          properties:
  *              id:
  *                type: string
- *                example: "21"
+ *                example: '"21"'
  *              name:
  *                type: string
  *                example: "Kobe Bryant"
@@ -169,7 +169,7 @@
  *    summary: Creates new stat
  *    description: Add a new stats
  *    consumes:
- *      - applicatio/json
+ *      - application/json
  *    parameters:
  *      - in: body
  *        name: season
@@ -180,7 +180,7 @@
  *          properties:
  *              year:
  *                type: string
- *                example: "2021"
+ *                example: '"2021"'
  *              win:
  *                type: integer
  *                example: 55
